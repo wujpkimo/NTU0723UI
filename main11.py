@@ -14,12 +14,18 @@ l1 = tk.Label(main, text="label1", font=font2, bg='#C0FFEE')
 l2 = tk.Label(main, text="label2", font=font2, bg='#C0EEFF')
 
 
+counter = 0
+
 def func1():
-    l1.config(text="button1 clicked", bg="#FFFFEE")
+    global counter
+    l1.config(text="button1 clicked %d times" % counter, bg="#FFFFEE")
+    counter += 1
 
 
 def func2():
-    l1.config(text="button2 clicked", bg="#C0FFEE")
+    global counter
+    counter = 0
+    l1.config(text="button2 clicked %d times" % counter, bg="#C0FFEE")
 
 
 def func3():
