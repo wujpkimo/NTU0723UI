@@ -13,8 +13,9 @@ font2 = Font(family="@標楷體", size=28)
 l1 = tk.Label(main, text="label1", font=font2, bg='#C0FFEE')
 l2 = tk.Label(main, text="label2", font=font2, bg='#C0EEFF')
 
-
 counter = 0
+counter2 = [0]
+
 
 def func1():
     global counter
@@ -23,9 +24,8 @@ def func1():
 
 
 def func2():
-    global counter
-    counter = 0
-    l1.config(text="button2 clicked %d times" % counter, bg="#C0FFEE")
+    l2.config(text="button2 clicked %d times" % counter2[0], bg="#C0FFEE")
+    counter2[0] += 1
 
 
 def func3():
