@@ -13,8 +13,19 @@ class Rest1(Resource):
 class Rest2(Resource):
     items = ['sample1', 'sample2']
 
+    def put(self, index):
+        data = request.form['data']
+        self.items[index] = data
+        return "index=%d, result=%s" % (index, self.items)
+
+    def post(self, index):
+        data = request.form['data']
+        self.items.append(data)
+        return data
+
     def get(self, index):
         return self.items
+
 
 
 api.add_resource(Rest1, '/rest1')
