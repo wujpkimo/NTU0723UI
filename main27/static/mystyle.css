@@ -1,0 +1,18 @@
+tr:nth-child(even) {
+    background-color:#C0FFEE;
+}
+tr:nth-child(odd) {
+    background-color: #FFC0EE;
+}
+table {
+    border:3px solid #880000;
+}
+th {
+    background-color:#FFC0EE;
+}
+tr, td {
+    border: 2px solid #363663;
+}
+td:hover {
+    background-color: #EEC0FF;
+}
